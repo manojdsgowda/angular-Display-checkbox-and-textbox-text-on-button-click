@@ -1,0 +1,11 @@
+<h2>Checkbox list example</h2>
+
+<ul>
+	<li *ngFor="let item of list">
+    <input type="checkbox" [(ngModel)]="item.checked">{{item.title}}
+  </li>
+</ul>
+
+<pre>{{this.result | json}}</pre>
+<button (click)="onClickMe()">Submit</button>
+<p>{{clickMessage}}</p>

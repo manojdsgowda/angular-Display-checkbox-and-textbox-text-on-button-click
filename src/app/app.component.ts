@@ -9,22 +9,22 @@ export class AppComponent implements OnInit  {
 
   list: any[];
     text: string;
-  clickMessage = [''];
+  clickMessage: string;
+    text1: string;
+  clickMessage1 = '';
 
   ngOnInit() {
-    this.list = [{title: 'Physics',checked: false,},
-                 {title: 'Chemistry',checked: false,},
-                 {title: 'Maths',checked: false,},
-                 {title: 'Biology',checked: false,},
+    this.list = [{title: 'Physics',},
+                 {title: 'Chemistry'},
+                 {title: 'Maths'},
+                 {title: 'Biology'},
                 ]
    }
-
-//  get result() {
- //   return this.list.filter(item => item.checked);
- // }
-
+   
       onClickMe() {
-    this.clickMessage = this.list.filter(item => item.checked);
+        this.clickMessage1 = 'Student Name is '+ this.text1;
+    //this.clickMessage = this.list.filter(item => item.checked);
+        this.clickMessage =JSON.stringify(this.list.filter(item => item.checked));
   }
 
 }

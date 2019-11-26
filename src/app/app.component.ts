@@ -12,6 +12,7 @@ export class AppComponent implements OnInit  {
   clickMessage: string;
     text1: string;
   clickMessage1 = '';
+  test:string;
 
   ngOnInit() {
     this.list = [{title: 'Physics',},
@@ -24,7 +25,9 @@ export class AppComponent implements OnInit  {
       onClickMe() {
         this.clickMessage1 = 'Student Name is '+ this.text1;
     //this.clickMessage = this.list.filter(item => item.checked);
-        this.clickMessage =JSON.stringify(this.list.filter(item => item.checked));
+
+    this.clickMessage =JSON.stringify(this.list.filter(item =>
+    item.checked));
   }
 
 }

@@ -10,3 +10,28 @@
 <button (click)="onClickMe()">Submit</button>
 <p>{{clickMessage1}}</p>
 <p>{{clickMessage}}</p>
+
+
+
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+
+
+<h4>Categories</h4>
+<div class="form-check" *ngFor="let cat of categories">
+    <input class="form-check-input" (change)="onChange(cat.name, $event.target.checked)" name="{{ cat.name }}" type="checkbox" id="{{cat.name}}">
+    <label class="form-check-label" for="{{cat.name}}">
+        {{cat.name}}
+    </label>
+</div>
+
+<button (click)="onClickMe()">Submit</button>
+
+<div class="form-check" *ngFor="let t of test">
+     <label class="form-check-label" for="{{t}}">
+        {{t}}
+    </label>
+</div>
